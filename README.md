@@ -484,9 +484,9 @@ Sessions under 60 seconds score 0 by design.
 
 ---
 
-## What Changed in v12
+## What Changed in v13
 
-StudyNotch v12 is a ground-up modernization, moving to the **Observation** framework and introducing immersive, data-driven features.
+StudyNotch v13 is a ground-up modernization, moving to the **Observation** framework and introducing immersive, data-driven features.
 
 ### 🏗 Architecture
 - **@Observable Migration**: The entire app now uses the high-performance Observation framework, replacing `ObservableObject`.
