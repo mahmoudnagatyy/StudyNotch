@@ -2,7 +2,7 @@
 
 > A macOS app that lives in your **MacBook notch** — a full-featured study companion with timers, Pomodoro presets, analytics, AI coaching, spaced repetition, tasks, exams, Notion sync, and more.
 
-**Version:** v12 · **Requires:** macOS 13+ · **Architecture:** Apple Silicon + Intel (universal via Swift PM)
+**Version:** v13 · **Requires:** macOS 13+ · **Architecture:** Apple Silicon + Intel (universal via Swift PM)
 
 ---
 
