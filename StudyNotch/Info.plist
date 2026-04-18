@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>StudyNotch</string>
+    <key>CFBundleDisplayName</key>
+    <string>StudyNotch</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.mahmoud.studynotch</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+    <key>CFBundleVersion</key>
+    <string>1.0</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleExecutable</key>
+    <string>StudyNotch</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+    <key>LSUIElement</key>
+    <true/>
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+    <key>NSHighResolutionCapable</key>
+    <true/>
+    <key>NSSupportsAutomaticGraphicsSwitching</key>
+    <true/>
+    <key>NSAccessibilityUsageDescription</key>
+    <string>StudyNotch needs Accessibility access to read window titles for auto-session detection and study activity tracking.</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>StudyNotch saves study sessions and exam dates to your calendar.</string>
+    <key>NSCalendarsWriteOnlyAccessUsageDescription</key>
+    <string>StudyNotch adds study sessions and exam events to your calendar.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>StudyNotch uses speech recognition for hands-free voice commands to control your study timer.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>StudyNotch uses the microphone for voice-activated study commands.</string>
+</dict>
+</plist>
