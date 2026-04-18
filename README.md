@@ -17,6 +17,17 @@ First build ~60 s · subsequent builds ~10 s. The script compiles, bundles, sign
 
 > **Accessibility permission** — approve once on first run. The app uses the same binary path (`/Applications/StudyNotch.app`) every build so you never need to re-approve.
 
+## Screenshots
+
+Repository screenshots live in `screenshots/`.
+
+![UI Screenshot](screenshots/ui_2026-04-19_1.01.41AM.png)
+![UI Screenshot](screenshots/ui_2026-04-19_1.07.26AM.png)
+![UI Screenshot](screenshots/ui_2026-04-19_1.10.18AM.png)
+![UI Screenshot](screenshots/ui_2026-04-19_1.10.57AM.png)
+![UI Screenshot](screenshots/ui_2026-04-19_1.12.50AM.png)
+![UI Screenshot](screenshots/ui_2026-04-19_1.17.11AM.png)
+
 ---
 
 ## Keyboard Shortcuts

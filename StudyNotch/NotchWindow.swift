@@ -258,13 +258,6 @@ struct NotchView: View {
             .allowsHitTesting(false)
 
             HStack(spacing: 5) {
-                // Seasonal icon
-                if !ThemeService.shared.currentSeason.emoji.isEmpty {
-                    Text(ThemeService.shared.currentSeason.emoji)
-                        .font(.system(size: 9))
-                        .opacity(0.8)
-                }
-
                 // Pulsing subject-colour dot with bloom
                 ZStack {
                     if pulsing || momentumGlow > 0.4 {
@@ -932,8 +925,14 @@ struct NotchView: View {
 
     func logDistraction() {
         guard timer.state == .running else { return }
-        let labels = ["📱 Phone", "💬 Social", "💭 Mind wandered", "🔊 Noise", "Other"]
+        let labels = ["📱 Phone", "💬 Social", "Mind wandered", "🔊 Noise", "Other"]
         DispatchQueue.main.async {
+            NotchHoverMonitor.shared.suspendHover()
+            withAnimation(.spring(response: 0.32, dampingFraction: 0.82)) {
+                mode = 0
+            }
+            defer { NotchHoverMonitor.shared.resumeHover() }
+
             let alert = NSAlert()
             alert.messageText     = "Log Distraction"
             alert.informativeText = "What distracted you?"
@@ -1022,6 +1021,7 @@ final class NotchHoverMonitor {
     static let shared = NotchHoverMonitor()
 
     var isHovering: Bool = false
+    var isHoverSuppressed: Bool = false
     var isLockedExpanded: Bool = false {
         didSet {
             if isLockedExpanded {
@@ -1063,8 +1063,22 @@ final class NotchHoverMonitor {
 
     deinit { stop() }
 
+    func suspendHover() {
+        isHoverSuppressed = true
+        exitWorkItem?.cancel()
+        exitWorkItem = nil
+        isHovering = false
+        panel?.ignoresMouseEvents = true
+    }
+
+    func resumeHover() {
+        isHoverSuppressed = false
+        evaluate()
+    }
+
     /// Core logic: is the mouse inside the pill?
     private func evaluate() {
+        guard !isHoverSuppressed else { return }
         guard !isLockedExpanded else { return }
         guard let screen = NSScreen.main else { return }
         let mouse = NSEvent.mouseLocation
@@ -1192,4 +1206,3 @@ class NotchWindowController: NSWindowController {
                               width: panelW, height: panelH), display: true)
     }
 }
-
