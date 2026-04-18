@@ -9,7 +9,7 @@
 ## Quick Start
 
 ```bash
-cd StudyNotch_v3
+cd StudyNotch
 ./build.sh
 ```
 
